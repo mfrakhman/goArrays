@@ -17,4 +17,24 @@ func main() {
 	}
 	products = append(products, Product{id: "2", title: "Two", price: 100})
 	fmt.Println(products)
+
+	productName := make([]string, 2, 5)
+	// make function creating new slice with 2 empty indexes
+
+	productName[0] = "Apple"
+
+	productName = append(productName, "Laptop")
+	productName = append(productName, "Headphone")
+	productName = append(productName, "Mouse")
+	productName = append(productName, "Monitor")
+
+	fmt.Println(productName)
+	fmt.Println(productName[1])
+	fmt.Println(productName[2])
+	fmt.Println(productName[3])
+
+	for i, val := range productName {
+		fmt.Println("index:", i)
+		fmt.Println("value:", val)
+	}
 }
